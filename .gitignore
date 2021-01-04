@@ -1,0 +1,14 @@
+*.bak
+core
+.DS_Store
+
+__pycache__
+*.pyc
+build
+dist
+*.egg-info
+
+.idea/
+*.iml
+
+venv

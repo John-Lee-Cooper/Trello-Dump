@@ -1,0 +1,7 @@
+typer
+py-trello
+oauthlib
+requests-oauthlib
+PyYAML
+pandas
+XlsxWriter
