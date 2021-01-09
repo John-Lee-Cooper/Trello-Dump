@@ -4,8 +4,8 @@
 
 from typing import List, Optional
 
-from typer import echo
 from cli import Style
+from typer import echo
 
 
 def select(

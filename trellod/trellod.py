@@ -10,19 +10,18 @@ Build trello export cli
 """
 
 import sys
+import webbrowser
 from pathlib import Path
 from urllib import request
-import webbrowser
 
 import pandas as pd
 from trello import TrelloClient
 
+from .authorize import authorize
 from .lib.cli import Style
 from .lib.cli_select import select
-from .lib.string_util import safe_filename
 from .lib.config import Config
-from .authorize import authorize
-
+from .lib.string_util import safe_filename
 
 style = Style(fg="green")
 

@@ -2,13 +2,12 @@
 
 """ Command Line Interface functions """
 
-from enum import IntEnum
-from typing import Callable, Any
 import sys
+from enum import IntEnum
+from typing import Any, Callable
 
-import typer
 import click
-
+import typer
 from str_enum import StrEnum
 
 

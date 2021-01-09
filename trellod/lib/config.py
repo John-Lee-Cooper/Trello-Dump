@@ -3,15 +3,14 @@
 
 """ Configuration file class """
 
+import platform
+from pathlib import Path
+
 # import json
 from typing import Optional
-from pathlib import Path
-import platform
 
 import yaml
-
 from cli import Style
-
 
 msg_style = Style(fg="green")
 

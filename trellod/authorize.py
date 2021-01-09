@@ -12,9 +12,8 @@ from click import clear
 from requests_oauthlib import OAuth1Session
 from requests_oauthlib.oauth1_session import TokenRequestDenied
 
-from .lib.dev_null_redirect import DevNullRedirect
 from .lib.cli import Style
-
+from .lib.dev_null_redirect import DevNullRedirect
 
 err_style = Style(fg="red")
 msg_style = Style(fg="green")
