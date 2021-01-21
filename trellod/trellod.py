@@ -17,11 +17,11 @@ from urllib import request
 import pandas as pd
 from trello import TrelloClient
 
-from .authorize import authorize
-from .lib.cli import Style
-from .lib.cli_select import select
-from .lib.config import Config
-from .lib.string_util import safe_filename
+from lib.cli import Style
+from lib.cli_select import select
+from lib.config import Config
+from lib.string_util import safe_filename
+from trellod.authorize import authorize
 
 style = Style(fg="green")
 
@@ -94,7 +94,7 @@ def column_width(df, field_name, max_width=None) -> int:
 def df_to_excel(df, excel, sheet_name, max_width=60):
     """ TODO """
 
-    # num_rows = len(df.index)
+    num_rows = len(df.index)
     num_cols = len(df.columns)
 
     cell_format = excel.book.add_format(
@@ -122,6 +122,8 @@ def df_to_excel(df, excel, sheet_name, max_width=60):
     for col, field_name in enumerate(df):  # loop through all columns
         width = column_width(df, field_name, max_width)
         worksheet.set_column(col, col, width, cell_format, options)
+
+    worksheet.autofilter(0, 0, num_rows - 1, num_cols - 1)
 
 
 def dump_trello(filename: str, lists: list) -> None:

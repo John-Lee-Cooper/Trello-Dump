@@ -1,0 +1,13 @@
+repo_name: trello-dump
+version: 0.0.1
+module_name: trellod
+entry_points: trellod=trellod.trellod:main
+
+description: Trello Dump is a utility to dump the contents of a Trello board to an Excel spreadsheet.
+keywords: trello,oauth,click 
+python_requires: 3.6
+license: GPL
+
+author: John Lee Cooper
+author_email: john.lee.cooper@gatech.edu
+repo_url: github.com/John-Lee-Cooper

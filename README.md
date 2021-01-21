@@ -1,4 +1,4 @@
-# Trello Dump #
+# Trello Dump
 
 Trello Dump is a utility to dump the contents of a Trello board to an Excel spreadsheet.
 
@@ -50,9 +50,10 @@ The remaining worksheets will contain details of the cards in each of the boards
 ![excel-list](image/excel_list_tab.png)
 
 
-## Contact
+## Todo
+
+## Written by
 
 * John Lee Cooper
 * John.Lee.Cooper@gatech.edu
-
 
