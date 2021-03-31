@@ -154,14 +154,13 @@ def dump_trello(filename: str, lists: list) -> None:
             desc.append(card.description.strip())
             items.append(
                 "\n".join(
-                    [
-                        "\n".join([item["name"].strip() for item in checklist.items])
-                        for checklist in card.checklists
-                    ]
+                    "\n".join(item["name"].strip() for item in checklist.items)
+                    for checklist in card.checklists
                 )
             )
+
             att.append(
-                "\n".join([attachment.url for attachment in card.get_attachments()])
+                "\n".join(attachment.url for attachment in card.get_attachments())
             )
 
         df = pd.DataFrame(

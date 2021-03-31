@@ -117,10 +117,9 @@ def authorize(app_name="this app") -> Dict[str, str]:
     )
     access_token = session.fetch_access_token(access_token_url)
 
-    config = dict(
+    return dict(
         api_key=api_key,
         api_secret=api_secret,
         oauth_token=access_token["oauth_token"],
         oauth_token_secret=access_token["oauth_token_secret"],
     )
-    return config
